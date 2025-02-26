@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<title>Example of Bootstrap 3 Carousel</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style type="text/css">
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+ }
+
+  .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+  }
+
+  .container .card{
+    width: 300px;
+    height: 450px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    background-color: aqua;
+  }
+
+  .container .card h1{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    transform-style: preserve-3d;
+  }
+
+ h2{
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+ }
+
+
+
+  .container .card img.produto{
+    max-width: 250px;
+    transform-style: preserve-3d;
+    transition: .5s;
+  }
+
+  .container .card:hover img.produto, .container .card:hover button{
+    transform: translate3d(0,0,100px);
+  }
+
+  .container .card button{
+    padding: 10px 40px;
+    background-color: blue;
+    border: 0;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: .5s;
+  }
+
+  .container div.card1{
+    background-image: linear-gradient(45deg, #003cff, #00f7ff);
+  }
+
+  .container div.card2{
+    background-image: linear-gradient(45deg, #003cff, #00f7ff);
+  }
+
+ 
+ 
+ ul{
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    gap: 40px;
+ }
+
+ ul li{
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px #00000065;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .2s;
+ }
+
+ ul li .icon{
+    color: #ccc;
+    font-size: 2.2em;
+    transform: .2s;
+ }
+
+ ul li .text{
+    color: #ffffff;
+    font-size: 20px;
+    transform: scale(0);
+    transition: .2s;
+    transition-delay: .1s;
+ }
+
+ ul li:hover{
+    width: 180px;
+ }
+
+ ul li span{
+    position: absolute;
+ }
+
+ ul li:hover .text{
+    transform: scale(1);
+ }
+
+ ul li:hover .icon{
+    transform: scale(0);
+ }
+
+ ul li::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(45deg, var(--cor1), var(--cor2));
+    inset: 0;
+    opacity: 0;
+    border-radius: 60px;
+ }
+
+ ul li:hover::before{
+    opacity: 1;
+ }
+
+ 
+
+</style>
+</head>
+<body>
+    
+  
+   
+
+  <br>
+                    
+        <ul>
+     
+          <a href="https://www.instagram.com/jrcinformatica2024/" target="_blank">
+          <li style="--cor1: #FB3997; --cor2: #FECF12;">
+            <span class="icon"><i class="bi bi-instagram"></i></span>
+            <span class="text">jrcinformatica2024</span>
+          </li>
+        </a>    
+        <a href="https://www.facebook.com/jose.cassela.3/" target="_blank">
+            <li style="--cor1: #09C5FF; --cor2: #0986ff;">
+              <span class="icon"><i class="bi bi-facebook"></i></i></span>
+              <span class="text">jose.formatopc@hotmail.com</span>
+            </li>
+          </a>  
+          <a href="https://api.whatsapp.com/send?phone=5517992853648&text=Ol%C3%A1%20no%20que%20posso%20te%20ajudar?" target="_blank">
+            <li style="--cor1: #43FE84; --cor2: #2DBC5D;">
+              <span class="icon"><i class="bi bi-whatsapp"></i></i></span>
+              <span class="text">1799285-3648</span>
+            </li>
+          </a>  
+          <a href="https://joseurso.github.io/PORTIFOLIO/" target="_blank">
+            <li style="--cor1: #ffffff; --cor2: #0986ff;">
+              <span class="icon"><i class="bi bi-globe2"></i></i></span>
+              <span class="text">Site</span>
+            </li>
+          </a>          
+        </ul>
+       
+    
+    <div class="container">
+
+        <div class="card card1">
+            <h1>Computador Basico Completo</h1>
+            <h2>Core 2duo 4gb de memória HD/500GB</h2>
+            <img src="./dell.jpg" alt="" class="produto">
+            <br>
+            <button>$650.00 Comprar</button>
+        </div>
+      
+
+    </div>
+
+
+
+
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 25,
+		speed: 400,
+        glare: true,
+        "max-glare": 0.5 
+	});
+  </script>
+
+
+
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
